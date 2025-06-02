@@ -30,15 +30,15 @@ const TableHeader = styled.header`
 
 const CabinTable = () => {
   const {
-    isLoading,
+    isPending,
     data: cabins,
     error,
   } = useQuery({
-    queryKey: ['cabin'],
+    queryKey: ['cabins'],
     queryFn: getCabins,
   });
 
-  if (isLoading) return <Spinner />;
+  if (isPending) return <Spinner />;
 
   return (
     <Table role='table'>
