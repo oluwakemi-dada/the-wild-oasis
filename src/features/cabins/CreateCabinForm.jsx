@@ -9,11 +9,11 @@ import FileInput from '../../ui/FileInput';
 import Textarea from '../../ui/Textarea';
 import FormRow from '../../ui/FormRow';
 
-const CreateCabinForm = ({ cabinToUpdate = {} }) => {
+const CreateCabinForm = ({ cabinToUpdate = {}, onCloseModal }) => {
   const { isCreating, createCabin } = useCreateCabin();
   const { isUpdating, updateCabin } = useUpdateCabin();
   const isWorking = isCreating || isUpdating;
-  
+
   const { id: updateId, ...updateValues } = cabinToUpdate;
   const isUpdateSession = Boolean(updateId);
 
@@ -29,14 +29,20 @@ const CreateCabinForm = ({ cabinToUpdate = {} }) => {
       updateCabin(
         { newCabinData: { ...data, image }, id: updateId },
         {
-          onSuccess: () => reset(),
+          onSuccess: () => {
+            reset();
+            onCloseModal?.();
+          },
         }
       );
     } else {
       createCabin(
         { ...data, image: image },
         {
-          onSuccess: () => reset(),
+          onSuccess: () => {
+            reset();
+            onCloseModal?.();
+          },
         }
       );
     }
@@ -47,7 +53,10 @@ const CreateCabinForm = ({ cabinToUpdate = {} }) => {
   };
 
   return (
-    <Form onSubmit={handleSubmit(onSubmit, onError)}>
+    <Form
+      onSubmit={handleSubmit(onSubmit, onError)}
+      type={onCloseModal ? 'modal' : 'regular'}
+    >
       <FormRow label='Cabin name' error={errors?.name?.message}>
         <Input
           type='text'
@@ -131,7 +140,11 @@ const CreateCabinForm = ({ cabinToUpdate = {} }) => {
       </FormRow>
 
       <FormRow>
-        <Button variation='secondary' type='reset'>
+        <Button
+          variation='secondary'
+          type='reset'
+          onClick={() => onCloseModal?.()}
+        >
           Cancel
         </Button>
         <Button disabled={isWorking}>
