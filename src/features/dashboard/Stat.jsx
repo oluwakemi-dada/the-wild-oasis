@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledStat = styled.div`
   /* Box */
@@ -47,7 +47,7 @@ const Value = styled.p`
   font-weight: 500;
 `;
 
-function Stat({ icon, title, value, color }) {
+const Stat = ({ icon, title, value, color }) => {
   return (
     <StyledStat>
       <Icon color={color}>{icon}</Icon>
@@ -55,6 +55,6 @@ function Stat({ icon, title, value, color }) {
       <Value>{value}</Value>
     </StyledStat>
   );
-}
+};
 
 export default Stat;

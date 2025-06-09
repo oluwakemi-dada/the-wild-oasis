@@ -20,7 +20,7 @@ const StyledConfirmDelete = styled.div`
   }
 `;
 
-function ConfirmDelete({ resourceName, onConfirm, disabled, onCloseModal }) {
+const ConfirmDelete = ({ resourceName, onConfirm, disabled, onCloseModal }) => {
   return (
     <StyledConfirmDelete>
       <Heading as='h3'>Delete {resourceName}</Heading>
@@ -43,6 +43,6 @@ function ConfirmDelete({ resourceName, onConfirm, disabled, onCloseModal }) {
       </div>
     </StyledConfirmDelete>
   );
-}
+};
 
 export default ConfirmDelete;

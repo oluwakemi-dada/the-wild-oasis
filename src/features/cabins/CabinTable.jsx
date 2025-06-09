@@ -1,15 +1,17 @@
 import { useCabins } from './useCabins';
-import Spinner from '../../ui/Spinner';
+import { useSearchParams } from 'react-router-dom';
 import CabinRow from './CabinRow';
+import Spinner from '../../ui/Spinner';
 import Table from '../../ui/Table';
 import Menus from '../../ui/Menus';
-import { useSearchParams } from 'react-router-dom';
+import Empty from '../../ui/Empty';
 
 const CabinTable = () => {
   const { isPending, cabins } = useCabins();
   const [searchParams] = useSearchParams();
 
   if (isPending) return <Spinner />;
+  if (!cabins.length) return <Empty resourceName='cabins' />;
 
   // Filter
   const filterValue = searchParams.get('discount') || 'all';
