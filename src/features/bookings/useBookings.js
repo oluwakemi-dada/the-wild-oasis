@@ -12,7 +12,7 @@ export const useBookings = () => {
   const filter =
     !filterValue || filterValue === 'all'
       ? null
-      : { field: 'status', value: filterValue, method: 'gte' };
+      : { field: 'status', value: filterValue };
 
   // Sort
   const sortByRaw = searchParams.get('sortBy') || 'startDate-desc';
