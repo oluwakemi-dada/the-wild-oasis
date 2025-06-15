@@ -141,7 +141,7 @@ const CreateCabinForm = ({ cabinToUpdate = {}, onCloseModal }) => {
 
       <FormRow>
         <Button
-          variation='secondary'
+          variations='secondary'
           type='reset'
           onClick={() => onCloseModal?.()}
         >

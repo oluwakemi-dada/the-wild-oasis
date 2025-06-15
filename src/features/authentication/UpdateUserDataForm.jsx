@@ -45,7 +45,7 @@ const UpdateUserDataForm = () => {
         />
       </FormRow>
       <FormRow>
-        <Button type='reset' variation='secondary'>
+        <Button type='reset' variations='secondary'>
           Cancel
         </Button>
         <Button>Update account</Button>
