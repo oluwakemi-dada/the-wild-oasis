@@ -67,7 +67,7 @@ const UpdateUserDataForm = () => {
       <FormRow>
         <Button
           type='reset'
-          variations='secondary'
+          variation='secondary'
           disabled={isUpdating}
           onClick={handleCancel}
         >

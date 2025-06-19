@@ -72,7 +72,7 @@ const BookingDetail = () => {
 
         <Modal>
           <Modal.Open opens='delete'>
-            <Button variations='danger'>Delete booking</Button>
+            <Button variation='danger'>Delete booking</Button>
           </Modal.Open>
           <Modal.Window name='delete'>
             <ConfirmDelete
@@ -87,7 +87,7 @@ const BookingDetail = () => {
           </Modal.Window>
         </Modal>
 
-        <Button variations='secondary' onClick={moveBack}>
+        <Button variation='secondary' onClick={moveBack}>
           Back
         </Button>
       </ButtonGroup>

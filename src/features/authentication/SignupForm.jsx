@@ -74,7 +74,7 @@ const SignupForm = () => {
       <FormRow>
         {/* type is an HTML attribute! */}
         <Button
-          variations='secondary'
+          variation='secondary'
           type='reset'
           disabled={isPending}
           onClick={reset}
