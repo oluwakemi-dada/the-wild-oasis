@@ -27,8 +27,8 @@ Add the tables and schema
 
 Copy your Supabase URL and Key into an .env file:
 
-VITE_SUPABASE_URL=
-VITE_SUPABASE_KEY=
+1. VITE_SUPABASE_URL=
+2. VITE_SUPABASE_KEY=
 
 ## Start the development server
 
