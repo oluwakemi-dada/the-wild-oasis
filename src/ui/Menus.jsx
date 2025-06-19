@@ -88,14 +88,13 @@ const Toggle = ({ id }) => {
   const { close, open, openId, setPosition } = useContext(MenusContext);
 
   const handleClick = (e) => {
+    e.stopPropagation();
     const rect = e.target.closest('button').getBoundingClientRect();
     openId === '' || openId !== id ? open(id) : close();
     setPosition({
       x: window.innerWidth - rect.width - rect.x,
       y: rect.y + rect.height + 8,
     });
-
-    console.log(rect);
   };
 
   return (
@@ -107,7 +106,7 @@ const Toggle = ({ id }) => {
 
 const List = ({ id, children }) => {
   const { openId, position, close } = useContext(MenusContext);
-  const ref = useOutsideClick(close);
+  const ref = useOutsideClick(close, false);
 
   if (openId !== id) return null;
 
@@ -126,6 +125,7 @@ const Button = ({ children, icon, onClick }) => {
     onClick?.();
     close();
   };
+
   return (
     <li>
       <StyledButton onClick={handleClick}>
