@@ -17,7 +17,7 @@ The app demonstrates a real-world admin dashboard interface for managing booking
 
 ## Install dependencies
 
-npm install
+`npm install`
 
 ## Connect to Supabase
 
@@ -32,7 +32,7 @@ Copy your Supabase URL and Key into an .env file:
 
 ## Start the development server
 
-npm run dev
+`npm run dev`
 
 Uncomment the Uploader component in src/ui/Sidebar.jsx file.
 Click on "Upload ALL" to upload sample data to supabase.
