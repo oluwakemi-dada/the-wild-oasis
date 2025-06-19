@@ -5,7 +5,7 @@ The app demonstrates a real-world admin dashboard interface for managing booking
 
 ## Demo
 
->  [Live Demo](https://the-wild-oasis-appp.netlify.app/)
+<a href="https://the-wild-oasis-appp.netlify.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
 
 ![Screenshot of The Wild Oasis](./screenshot.png)
 
@@ -17,7 +17,7 @@ The app demonstrates a real-world admin dashboard interface for managing booking
 
 ## Install dependencies
 
-> npm install
+npm install
 
 ## Connect to Supabase
 
@@ -27,12 +27,12 @@ Add the tables and schema
 
 Copy your Supabase URL and Key into an .env file:
 
-> VITE_SUPABASE_URL=
-> VITE_SUPABASE_KEY=
+VITE_SUPABASE_URL=
+VITE_SUPABASE_KEY=
 
 ## Start the development server
 
-> npm run dev
+npm run dev
 
 Uncomment the Uploader component in src/ui/Sidebar.jsx file.
 Click on "Upload ALL" to upload sample data to supabase.
