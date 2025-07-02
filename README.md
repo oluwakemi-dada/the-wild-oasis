@@ -13,7 +13,7 @@ The app demonstrates a real-world admin dashboard interface for managing booking
 
 1. Full name : Test user
 2. Email address : test@example.com
-3. Password : 12345678
+3. Password : test1234
 
 ## Install dependencies
 
