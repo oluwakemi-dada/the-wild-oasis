@@ -9,12 +9,6 @@ The app demonstrates a real-world admin dashboard interface for managing booking
 
 ![Screenshot of The Wild Oasis](./screenshot.png)
 
-### Credentials
-
-1. Full name : Test user
-2. Email address : test@example.com
-3. Password : 12345678
-
 ## Install dependencies
 
 `npm install`
@@ -25,10 +19,7 @@ Create a Supabase project at supabase.com
 
 Add the tables and schema
 
-Copy your Supabase URL and Key into an .env file:
-
-1. VITE_SUPABASE_URL=
-2. VITE_SUPABASE_KEY=
+Rename example.env file to .env and fill accordingly:
 
 ## Start the development server
 
